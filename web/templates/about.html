@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %} Homepage {% endblock %}
+{% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lobster+Two&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+    </style>
+<style>
+    body {
+        background-image: url(../static/background4.jpg);
+        background-size: cover;
+    }
+    .itms{
+        font-size: 50px;
+        font-family: 'Great Vibes', cursive;
+        display: inline;
+        padding: 80px;
+    }
+    #icons {
+        text-align: center; 
+    }
+    #icn {
+        font-family: 'Great Vibes', cursive;
+    }
+</style>
+
+<h1 style="font-family: 'Sacramento', cursive; font-size: 80px;" data-aos="flip-left"><center>Tirthangkar Das</center></h1>  
+<br><br><br><br>
+<div id="icons">
+    <div id="icn" data-aos="flip-right">Instagram&nbsp;&nbsp;<a href="https://www.instagram.com/?hl=en"><img src="{{url_for('static', filename='instagram.svg')}}" width="50px" height="50px"></a></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div id="icn" data-aos="flip-left"><a href="https://github.com/"><img src="{{url_for('static', filename='snapchat.svg')}}" width="50px" height="50px"></a>&nbsp;&nbsp;&nbsp;Snapchat</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div id="icn" data-aos="flip-right">Github&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.snapchat.com/"><img src="{{url_for('static', filename='github.svg')}}" width="50px" height="50px"></a></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<br><br>        
+<h2><center style="font-family: 'Great Vibes', cursive; font-size: 40px;" data-aos="fade-up" >Developed Using</center></h2>
+<br><br><br><br>      
+<center>
+<ul>
+    <li data-aos="fade-up" class="itms">Flask</li>
+    <li data-aos="fade-up" class="itms">Python</li>
+    <li data-aos="fade-up" class="itms">Javascript</li>
+    <li data-aos="fade-up" class="itms">SQL</li>
+</ul>
+</center>
+
+{% endblock %}

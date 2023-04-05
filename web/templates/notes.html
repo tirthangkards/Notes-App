@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} Homepage {% endblock %}
+{% block content %}
+<style>
+    body {
+        background-image: url(../static/background.jpg);
+        background-size: cover;
+    }
+</style>
+<div>
+    <h2><center>{{user.username}}'s Notebook</center></h2>
+    <ul class="list-group list-group-flush" id="notes">
+        {% for note in user.notes %}
+            <li class="list-group-item" style="width:90rem; background: transparent; font-size: large;">
+                {{note.data}}
+                <button type="button" class="close btn" onClick="deleteNote({{note.id}})">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </li>
+        {% endfor %}
+    </ul>
+    <br><br><br>
+    <form  method="POST">
+        <center><textarea name="note" id="note" class="form-control" style="width: 80%; background: transparent;" placeholder="Write you notes here"></textarea></center>
+        <br>
+        <center><button type="submit" class="btn btn-primary">ADD</button></center>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% block title %} Sign Up {% endblock %}
+{% block content %}
+<style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .lead {
+        font-family: 'Montserrat Alternates', sans-serif;  
+      }
+      body {
+      background-image: url(../static/background3.jpg);
+      background-size: cover;
+    }
+</style>
+</head>
+<body class="bg-light">
+    <div class="container">
+        <main>
+            <div data-aos="fade-down" class="text-center">
+                <h2>Sign Up Form</h2>
+                <p class="lead">"When your hear speakes, take good notes" ~ Juidth Exner</p>
+            </div>
+
+            <br><br><Br>
+            <div class="row g-0">
+                <div>
+                    <form class="needs-validation" novalidate method="POST">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label" data-aos="fade-right">First name</label>
+                                <input type="text" class="form-control" data-aos="fade-right"  placeholder="First Name" name="firstName">
+                                <div class="invalid-feedback">Valid first name is required.</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label" data-aos="fade-left">Last name</label>
+                                <input type="text" class="form-control" data-aos="fade-left" id="lastName" placeholder="Last Name" name="lastName">
+                                <div class="invalid-feedback">Valid last name is required.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="username" class="form-label" data-aos="fade-up">Username</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" data-aos="fade-up">@</span>
+                                    <input type="text" class="form-control" data-aos="fade-up" id="username" placeholder="Username" name="username">
+                                    <div class="invalid-feedback">Your username is required.</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="email" class="form-label" data-aos="fade-up">Email</label>
+                                <input type="email" class="form-control" data-aos="fade-up" id="email" placeholder="you@example.com" name="email">
+                                <div class="invalid-feedback">Please enter a valid email address for shipping updates.</div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up">
+                                <label for="address" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up">
+                                <label for="address2" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+                            </div>
+                            <div class="col-md-5" data-aos="fade-up">
+                                <label for="country" class="form-label">Country</label>
+                                <select class="form-select" id="country">
+                                    <option>Choose...</option>
+                                    <option name="India" >India</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a valid country.</div>
+                            </div>
+                            <div class="col-md-4" data-aos="fade-up">
+                                <label for="state" class="form-label">State</label>
+                                <select class="form-select" id="state">
+                                    <option>Choose...</option>
+                                    <option>Assam</option>
+                                </select>
+                                <div class="invalid-feedback">Please provide a valid state.</div>
+                            </div>
+                            <div class="col-md-3" data-aos="fade-up">
+                                <label for="zip" class="form-label">Zip</label>
+                                <input type="text" class="form-control" name="pincode" id="zip">
+                                <div class="invalid-feedback">Zip code required.</div>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <button data-aos="fade-up" class="w-100 btn btn-primary btn-lg" type="submit">SIGN UP</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="my-5 pt-5 text-muted text-center text-small" data-aos="fade-up">
+            <p style="color:black ;" class="mb-1">&copy; Tirthangkar Das</p>
+            <ul class="list-inline">
+                <li  class="list-inline-item"><a style="color:black ;" href="{{url_for('views.home')}}">Home</a></li>
+                <li class="list-inline-item"><a style="color:black ;" href="{{url_for('views.about')}}">About us</a></li>
+                <li  class="list-inline-item"><a style="color:black ;" href="{{url_for('views.feedback')}}">Feedback</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+{% endblock %}

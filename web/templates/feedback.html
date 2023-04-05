@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Homepage {% endblock %}
+{% block content %}
+<style>
+    body {
+        background-image: url(../static/background5.jpg);
+        background-size: cover;
+    }
+</style>
+<div data-aos="fade-down" class="text-center">
+    <h2>Feedback</h2>
+    <p class="lead">“We all need people who will give us feedback. That’s how we improve.” ~ Bill Gates</p>
+</div>
+<form method="POST">
+    <center><textarea name="feedback" class="form-control" style="width: 80%; height: 350px; background: transparent;" placeholder="Feedback"></textarea></center>
+    <br>
+    <center><button type="submit" class="btn btn-primary">SUBMIT</button></center>
+</form>
+
+{% endblock %}
